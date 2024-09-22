@@ -38,7 +38,20 @@ Command-Line Example
     python text_sanitizer.py --source db --query "select colums_name from table_name" --target output.txt --config config.ini
 
 Config File Example (config.ini)
-   ```ini
+1. Usage for file and database sources in the config file:
+
+### Config File Example (`config.ini`)
+1. For File Input
+
+```ini
+[settings]
+source = file
+input = input.txt
+target = output.txt
+```
+
+2. For Database Input
+```ini
   [settings]
   source = db
   query = SELECT text_column FROM your_table
