@@ -28,7 +28,7 @@ The Text Sanitizer Application is a program designed to sanitize text and calcul
     pip install psycopg2
 
 ### Usage
-#### Command-Line Example
+#### 1. Command-Line Example
 1. For read a text file from "Source" and write to "Target"
    ```bash
     python text_sanitizer.py --source file --input input.txt --target output.txt
@@ -37,10 +37,9 @@ The Text Sanitizer Application is a program designed to sanitize text and calcul
    ```bash
     python text_sanitizer.py --source db --query "select colums_name from table_name" --target output.txt --config config.ini
 
-Config File Example (config.ini)
-1. Usage for file and database sources in the config file:
 
-#### Config File Example (`config.ini`)
+
+#### 2. Config File Example (`config.ini`)
 1. For File Input
 ```ini
 [settings]
