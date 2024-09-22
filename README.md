@@ -63,3 +63,13 @@ target = output.txt
 Run with config:
    ```bash
    python text_sanitizer.py --config config.ini 
+```
+
+## Question 3 - SQL
+### Objective
+Extract the product names and product classes for the top 2 sales for each product class in our product universe, ordered by class and then by sales. If there are any tie breakers, use the lower quantity to break the tie
+
+### SQL Script Explanation
+The SQL script retrieves and ranks products from the sales dataset. It calculates the sales value for each product by multiplying the retail price by the quantity sold. The results include the top two products by sales value for each product class.
+
+
