@@ -5,32 +5,66 @@
 
 ## Overview
 
-The Text Sanitizer Application is a Python program designed to sanitize input text by cleaning and transforming it, and then calculating character statistics. The application supports multiple input sources such as files or databases (PostgreSQL). It can efficiently handle large files using memory-mapped IO, and it utilizes parallel processing to sanitize text and calculate statistics in chunks for performance optimization.
+The Text Sanitizer Application is a program designed to sanitize text and calculate character statistics, supporting input from files and PostgreSQL databases.
 
 ## Features
+- Read from files or PostgreSQL databases.
+- Sanitize text (convert to lowercase, replace tabs).
+- Calculate alphabet frequency statistics.
+- Output results to a file.
+- Uses multiprocessing to sanitize text and compute statistics in parallel, improving performance on large datasets.
 
-- **Multiple Input Sources**:
-  - Read from a file using memory-mapped IO (efficient for large files).
-  - Read from a PostgreSQL database by executing SQL queries.
-  
-- **Text Sanitization**:
-  - Converts text to lowercase.
-  - Replaces certain special characters (e.g., tabs replaced with underscores).
-  
-- **Statistics Calculation**:
-  - Calculates alphabet statistics (frequency of each letter) in the sanitized text.
-  
-- **Output**:
-  - Writes the sanitized text and calculated statistics to an output file.
-  
-- **Configurable**:
-  - Command-line arguments or configuration file-based setup for flexibility.
-  
-- **Parallel Processing**:
-  - Uses multiprocessing to sanitize text and compute statistics in parallel, improving performance on large datasets.
 
 ## Requirements
 - Python 3.8+
 - PostgreSQL (if using database input)
+
+## Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/Dolphuwadol/Data-Engineer---Take-Home-Assignment.git
+   cd text-sanitizer-app
+2. Install required packages:
+   ```bash
+    pip install psycopg2
+
+## Usage
+Command-Line Example
+1. For read a text file from "Source" and write to "Target"
+   ```bash
+    python text_sanitizer.py --source file --input input.txt --target output.txt
+
+2. For read a text file from "Database" and write to "Target"
+   ```bash
+    python text_sanitizer.py --source db --query "select name from public.EVENT$EVENTPLANNING" --target output.txt --config config.ini
+
+Config File Example (config.ini)
+   ```ini
+    [settings]
+  source = db
+  query = SELECT text_column FROM your_table
+  target = output.txt
+  
+  [database]
+  dbname = your_db
+  user = your_user
+  password = your_password
+  host = localhost
+  port = 5432
+  ```
+Run with config:
+   ```bash
+      python text_sanitizer.py --config config.ini 
+
+
+
+
+ 
+
+
+  
+
+
 
 
