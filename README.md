@@ -15,7 +15,7 @@ The Text Sanitizer Application is a program designed to sanitize text and calcul
 
 ### Requirements
 - Python 3.8+
-- PostgreSQL (if using database input)
+- PostgreSQL 
 
 ### Installation
 
@@ -36,8 +36,6 @@ The Text Sanitizer Application is a program designed to sanitize text and calcul
 2. For read a text file from "Database" and write to "Target"
    ```bash
     python text_sanitizer.py --source db --query "select colums_name from table_name" --target output.txt --config config.ini
-
-
 
 #### 2. Config File Example (`config.ini`)
 1. For File Input
