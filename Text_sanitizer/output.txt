@@ -1,0 +1,22 @@
+if____you want to have a close convenience store like this in your community contact a____td tawandang co.,ltd
+Count of alphabelt:
+i: 6
+f: 1
+y: 3
+o: 9
+u: 3
+w: 2
+a: 8
+n: 9
+t: 10
+h: 2
+v: 2
+e: 7
+c: 7
+l: 3
+s: 3
+r: 2
+k: 1
+m: 2
+d: 3
+g: 1
