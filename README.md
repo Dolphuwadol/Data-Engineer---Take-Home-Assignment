@@ -19,23 +19,20 @@ This project implements a scalable, robust data pipeline for processing both Mas
 - Data Catalog
 
 ### Serving Layer Data Management Guidelines
-1. **Create Simplified Views for End Users**
-   - Design views that present data in a simple, user-friendly format.
+1. **Simplified Views**
    - Ensure that complex structures (such as nested arrays) are flattened. For example, arrays should be unwrapped into separate rows, making the data easier to work with.
+   
+2. **Clear Column Names**
+   - Use intuitive, meaningful column names for easy understanding.
 
-2. **Use Clear and Meaningful Column Names**
+3. **Materialized Views**
+   - Precompute frequent calculations using materialized views to boost performance.
 
-3. **Create Materialized Views for Frequent Calculations**
-   - Identify common or frequently-used calculations and create materialized views to store the precomputed results.
-   - Materialized views help improve query performance by reducing the need to perform repeated calculations.
+4. **Specialized Data Marts**
+   - Build focused data marts for specific business needs.
 
-4. **Develop Specialized Data Marts**
-   - Build data marts for specific business functions or domains.
-   - Each data mart should be tailored to the needs of specific user groups, providing focused access to the most relevant data.
-
-5. **Implement Data Governance with a Data Catalog**
-   - Use a data catalog to manage metadata, ensuring that information about data sources, structures, and transformations is easily accessible.
-   - This will enable better discovery of data and help users locate the information they need quickly and efficiently.
+5. **Data Governance**
+   - Use a data catalog for managing metadata and simplifying data discovery.
 
 
 ## Question 2 - Text Sanitizer
