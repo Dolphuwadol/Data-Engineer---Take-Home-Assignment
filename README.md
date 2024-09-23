@@ -1,4 +1,25 @@
 # Data-Engineer---Take-Home-Assignment
+## Question 1 - Data Pipeline Design
+This project implements a scalable, robust data pipeline for processing both Master and Transactional data from MongoDB to BigQuery. It's designed to cater to users with various levels of data literacy, from business users with basic SQL knowledge to data scientists.
+
+### Key Features
+
+Scalable design using GCP services
+Robust data quality checks and exception handling
+User-friendly data serving layer in BigQuery
+Support for both batch and potential streaming data ingestion
+
+### Technology Stack
+- Google Cloud Platform (GCP)
+- MongoDB
+- Apache Beam / Cloud Dataflow
+- Cloud Storage
+- BigQuery
+- Cloud Composer (Apache Airflow)
+- Data Catalog
+
+
+
 
 ## Question 2 - Text Sanitizer
 ### Overview
