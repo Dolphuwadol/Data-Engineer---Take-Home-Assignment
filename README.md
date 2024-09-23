@@ -4,10 +4,10 @@ This project implements a scalable, robust data pipeline for processing both Mas
 
 ### Key Features
 
-Scalable design using GCP services
-Robust data quality checks and exception handling
-User-friendly data serving layer in BigQuery
-Support for both batch and potential streaming data ingestion
+- Scalable design using GCP services
+- Robust data quality checks and exception handling
+- User-friendly data serving layer in BigQuery
+- Support for both batch and potential streaming data ingestion
 
 ### Technology Stack
 - Google Cloud Platform (GCP)
@@ -18,7 +18,24 @@ Support for both batch and potential streaming data ingestion
 - Cloud Composer (Apache Airflow)
 - Data Catalog
 
+### Serving Layer Data Management Guidelines
+1. **Create Simplified Views for End Users**
+   - Design views that present data in a simple, user-friendly format.
+   - Ensure that complex structures (such as nested arrays) are flattened. For example, arrays should be unwrapped into separate rows, making the data easier to work with.
 
+2. **Use Clear and Meaningful Column Names**
+
+3. **Create Materialized Views for Frequent Calculations**
+   - Identify common or frequently-used calculations and create materialized views to store the precomputed results.
+   - Materialized views help improve query performance by reducing the need to perform repeated calculations.
+
+4. **Develop Specialized Data Marts**
+   - Build data marts for specific business functions or domains.
+   - Each data mart should be tailored to the needs of specific user groups, providing focused access to the most relevant data.
+
+5. **Implement Data Governance with a Data Catalog**
+   - Use a data catalog to manage metadata, ensuring that information about data sources, structures, and transformations is easily accessible.
+   - This will enable better discovery of data and help users locate the information they need quickly and efficiently.
 
 
 ## Question 2 - Text Sanitizer
@@ -43,7 +60,7 @@ The Text Sanitizer Application is a program designed to sanitize text and calcul
 1. Clone the repository:
    ```bash
    git clone https://github.com/Dolphuwadol/Data-Engineer---Take-Home-Assignment.git
-   cd text-sanitizer-app
+   cd Text_sanitizer
 2. Install required packages:
    ```bash
     pip install psycopg2
